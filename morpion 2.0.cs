@@ -35,46 +35,10 @@ namespace morpion
                 n++;
                 Console.WriteLine("\n joueur 1 entrez le numéro de la case");
                 int choix = int.Parse(Console.ReadLine());
-                switch (choix)
-                {
 
-                    case 1:
-                        table[0] = x;
-                        break;
-                    case 2:
-                        table[1] = x;
-                        break;
-                    case 3:
-                        table[2] = x;
-                        break;
-                    case 4:
-                        table[3] = x;
-                        break;
-                    case 5:
-                        table[4] = x;
-                        break;
-                    case 6:
-                        table[5] = x;
-                        break;
-                    case 7:
-                        table[6] = x;
-                        break;
-                    case 8:
-                        table[7] = x;
-                        break;
-                    case 9:
-                        table[8] = x;
-                        break;
+                table = jouer(choix, x, table);
 
-                }
-
-                Console.WriteLine("\n-------");
-                Console.WriteLine("|" + table[0] + "|" + table[1] + "|" + table[2] + "|");
-                Console.WriteLine("-------");
-                Console.WriteLine("|" + table[3] + "|" + table[4] + "|" + table[5] + "|");
-                Console.WriteLine("-------");
-                Console.WriteLine("|" + table[6] + "|" + table[7] + "|" + table[8] + "|");
-                Console.WriteLine("-------");
+                DrawTab(table);
 
 
                 if (table[0] == x && table[1] == x && table[2] == x)
@@ -125,46 +89,10 @@ namespace morpion
                 n++;
                 Console.WriteLine("\n joueur 2 entrez le numéro de la case ");
                 choix = int.Parse(Console.ReadLine());
-                switch (choix)
-                {
 
-                    case 1:
-                        table[0] = o;
-                        break;
-                    case 2:
-                        table[1] = o;
-                        break;
-                    case 3:
-                        table[2] = o;
-                        break;
-                    case 4:
-                        table[3] = o;
-                        break;
-                    case 5:
-                        table[4] = o;
-                        break;
-                    case 6:
-                        table[5] = o;
-                        break;
-                    case 7:
-                        table[6] = o;
-                        break;
-                    case 8:
-                        table[7] = o;
-                        break;
-                    case 9:
-                        table[8] = o;
-                        break;
+                table = jouer(choix, o, table);
 
-                }
-
-                Console.WriteLine("\n-------");
-                Console.WriteLine("|" + table[0] + "|" + table[1] + "|" + table[2] + "|");
-                Console.WriteLine("-------");
-                Console.WriteLine("|" + table[3] + "|" + table[4] + "|" + table[5] + "|");
-                Console.WriteLine("-------");
-                Console.WriteLine("|" + table[6] + "|" + table[7] + "|" + table[8] + "|");
-                Console.WriteLine("-------");
+                DrawTab(table);
 
                 if (table[0] == o && table[1] == o && table[2] == o)
                 {
@@ -231,5 +159,13 @@ namespace morpion
             Console.WriteLine("|" + pions[6] + "|" + pions[7] + "|" + pions[8] + "|");
             Console.WriteLine("-------");
         }
+
+        static string[] jouer(int choix, string typePion, string[] pions)
+        {
+            pions[choix - 1] = typePion;
+            return pions;
+        }
+
+
     }
 }
