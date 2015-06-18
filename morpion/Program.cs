@@ -39,7 +39,7 @@ namespace morpion
             do
             {
                 n++;
-                Console.WriteLine("\n joueur 1 enrtez le numéro de la case");
+                Console.WriteLine("\n joueur 1 entrez le numéro de la case");
                 int choix = int.Parse (Console.ReadLine());
                 switch (choix)
                 {
