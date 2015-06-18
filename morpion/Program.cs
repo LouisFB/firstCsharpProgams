@@ -28,13 +28,13 @@ namespace morpion
             table[7] = "8";
             table[8] = "9";
 
-            Console.WriteLine("\n#######");
-            Console.WriteLine("#"+ table[0] +"#"+ table[1] +"#"+ table[2] + "#");
-            Console.WriteLine("#######");
-            Console.WriteLine("#" + table[3] + "#" + table[4] + "#" + table[5] + "#");
-            Console.WriteLine("#######");
-            Console.WriteLine("#" + table[6] + "#" + table[7] + "#" + table[8] + "#");
-            Console.WriteLine("#######");
+            Console.WriteLine("\n-------");
+            Console.WriteLine("|" + table[0] + "|" + table[1] + "|" + table[2] + "|");
+            Console.WriteLine("-------");
+            Console.WriteLine("|" + table[3] + "|" + table[4] + "|" + table[5] + "|");
+            Console.WriteLine("-------");
+            Console.WriteLine("|" + table[6] + "|" + table[7] + "|" + table[8] + "|");
+            Console.WriteLine("-------");
 
             do
             {
@@ -74,13 +74,14 @@ namespace morpion
 
                 }
 
-                Console.WriteLine("\n#######");
-                Console.WriteLine("#" + table[0] + "#" + table[1] + "#" + table[2] + "#");
-                Console.WriteLine("#######");
-                Console.WriteLine("#" + table[3] + "#" + table[4] + "#" + table[5] + "#");
-                Console.WriteLine("#######");
-                Console.WriteLine("#" + table[6] + "#" + table[7] + "#" + table[8] + "#");
-                Console.WriteLine("#######");
+                Console.WriteLine("\n-------");
+                Console.WriteLine("|" + table[0] + "|" + table[1] + "|" + table[2] + "|");
+                Console.WriteLine("-------");
+                Console.WriteLine("|" + table[3] + "|" + table[4] + "|" + table[5] + "|");
+                Console.WriteLine("-------");
+                Console.WriteLine("|" + table[6] + "|" + table[7] + "|" + table[8] + "|");
+                Console.WriteLine("-------");
+
 
                 if(table[0] == x && table[1] == x && table[2] == x)
                 {
@@ -163,13 +164,13 @@ namespace morpion
 
                 }
 
-                Console.WriteLine("\n#######");
-                Console.WriteLine("#" + table[0] + "#" + table[1] + "#" + table[2] + "#");
-                Console.WriteLine("#######");
-                Console.WriteLine("#" + table[3] + "#" + table[4] + "#" + table[5] + "#");
-                Console.WriteLine("#######");
-                Console.WriteLine("#" + table[6] + "#" + table[7] + "#" + table[8] + "#");
-                Console.WriteLine("#######");
+                Console.WriteLine("\n-------");
+                Console.WriteLine("|" + table[0] + "|" + table[1] + "|" + table[2] + "|");
+                Console.WriteLine("-------");
+                Console.WriteLine("|" + table[3] + "|" + table[4] + "|" + table[5] + "|");
+                Console.WriteLine("-------");
+                Console.WriteLine("|" + table[6] + "|" + table[7] + "|" + table[8] + "|");
+                Console.WriteLine("-------");
 
                 if (table[0] == o && table[1] == o && table[2] == o)
                 {
@@ -215,14 +216,15 @@ namespace morpion
                     j2NoWin = true;
                 }
             
+           
+            
+        }
+while (n <= 9);
             if (j2NoWin && j1NoWin == true)
             {
             Console.WriteLine("il n'y a pas de gagnant");
 
             }
-            
-        }
-while (n <= 9);
     }
     }
 }
