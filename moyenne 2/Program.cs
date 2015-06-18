@@ -11,15 +11,15 @@ namespace moyenne_2
         static void Main(string[] args)
         {
             int n = 0;
-            double moy1 = 0;           
+            int moy1 = 0;           
             do
             {
                 n++;
                 Console.WriteLine("entre un nombre");
-                double a = int.Parse(Console.ReadLine());
+                int a = int.Parse(Console.ReadLine());
                 moy1 += a;
-                
-                Console.WriteLine("la moyenne est " + (double)moy1 /  n);
+
+                Console.WriteLine("la moyenne est " + moy1/n);
             }
            while(true);
         }
