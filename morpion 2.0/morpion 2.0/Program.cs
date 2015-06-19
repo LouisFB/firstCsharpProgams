@@ -12,7 +12,7 @@ namespace morpion_2._0
         {
             bool finDuProg = new bool();
             int joueur = 1;
-            int n = 0;
+            int n = 1;
             string pion = "X";
             int choix = 0;
             var table = new string[9];
@@ -31,7 +31,7 @@ namespace morpion_2._0
 
             do
             {
-                n++;
+               
                Console.WriteLine("\n joueur {0} entrez le numéro de la case", joueur);
                 if (Int32.TryParse(Console.ReadLine(), out choix))
                 {
@@ -69,16 +69,19 @@ namespace morpion_2._0
                 {
                     joueur = 2;
                     pion = "O";
+                    n++;
                 }
+            
                 else
                 {
                     joueur = 1;
                     pion = "X";
+                    n++;
                 }
             }
             while (n <= 9 && finDuProg == false);
 
-            Console.WriteLine("merci d'avoir joué");
+            Console.WriteLine("partie nul, merci d'avoir joué");
         }
 
         static void DrawTab(string[] pions)
