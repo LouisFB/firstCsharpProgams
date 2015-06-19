@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moyenne 1", "moyenne 1\moye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moyenne 2", "moyenne 2\moyenne 2.csproj", "{9ADEEA9D-2816-42BA-8315-723F8941EF98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morpion 2.0", "morpion 2.0\morpion 2.0\morpion 2.0.csproj", "{ADD32392-6DB2-4D74-BCE7-82A774F6250F}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morpion", "morpion\morpion.csproj", "{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}"
 EndProject
 Global
@@ -33,6 +35,10 @@ Global
 		{9ADEEA9D-2816-42BA-8315-723F8941EF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ADEEA9D-2816-42BA-8315-723F8941EF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ADEEA9D-2816-42BA-8315-723F8941EF98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -7,19 +7,17 @@ using System.Threading.Tasks;
 namespace morpion_2._0
 {
     class Program
-    { 
-        
-
-            int n = 0;
+    {
         static void Main(string[] args)
         {
-
-           string x = "X";
-            string o = "O";
-            bool j2NoWin = new bool();
-            bool j1NoWin = new bool();
-
+            bool finDuProg = new bool();
+            int joueur = 1;
+            int n = 0;
+            string pion = "X";
+            int choix = 0;
             var table = new string[9];
+            string message = "";
+
             table[0] = "1";
             table[1] = "2";
             table[2] = "3";
@@ -29,99 +27,145 @@ namespace morpion_2._0
             table[6] = "7";
             table[7] = "8";
             table[8] = "9";
-
             DrawTab(table);
 
             do
             {
                 n++;
-                Console.WriteLine("\n joueur 1 entrez le numéro de la case");
-                int choix = int.Parse(Console.ReadLine());
+               Console.WriteLine("\n joueur {0} entrez le numéro de la case", joueur);
+                if (Int32.TryParse(Console.ReadLine(), out choix))
+                {
+                    message = test(table, choix);
 
-                table = jouer(choix, x, table);
+                    if (String.IsNullOrEmpty(message))
+                    {
+                        table = placerUnPion(choix, pion, table);
 
-                DrawTab(table);
+                        DrawTab(table);
+                    }
+                    else
+                    {
+                        DrawTab(table);
+                        Console.WriteLine(message);
+                        continue;
+                    }
+                }
 
-                vic();
+                else
+                {
+                    DrawTab(table);
+                    Console.WriteLine("ce n'est pas un chiffre");
+                    continue;
+                }
+                bool result = vic(pion, table);
 
+                if (result == true)
+                {
+                    Console.WriteLine("j{0} a gagné", joueur);
+                    finDuProg = true;
+                }
 
-                n++;
-                Console.WriteLine("\n joueur 2 entrez le numéro de la case ");
-                choix = int.Parse(Console.ReadLine());
-
-                table = jouer(choix, o, table);
-
-                DrawTab(table);
-
-                vic(o);
+                if (joueur == 1)
+                {
+                    joueur = 2;
+                    pion = "O";
+                }
+                else
+                {
+                    joueur = 1;
+                    pion = "X";
+                }
             }
-            while (n < 9);
+            while (n <= 9 && finDuProg == false);
+
+            Console.WriteLine("merci d'avoir joué");
         }
-        
 
         static void DrawTab(string[] pions)
         {
-            Console.WriteLine("\n-------");
-            Console.WriteLine("|" + pions[0] + "|" + pions[1] + "|" + pions[2] + "|");
-            Console.WriteLine("-------");
-            Console.WriteLine("|" + pions[3] + "|" + pions[4] + "|" + pions[5] + "|");
-            Console.WriteLine("-------");
-            Console.WriteLine("|" + pions[6] + "|" + pions[7] + "|" + pions[8] + "|");
-            Console.WriteLine("-------");
+            Console.Clear();
+            Console.WriteLine("\n-------------");
+            Console.WriteLine("|" + " " + pions[0] + " " + "|" + " " + pions[1] + " " + "|" + " " + pions[2] + " " + "|");
+            Console.WriteLine("-------------");
+            Console.WriteLine("|" + " " + pions[3] + " " + "|" + " " + pions[4] + " " + "|" + " " + pions[5] + " " + "|");
+            Console.WriteLine("-------------");
+            Console.WriteLine("|" + " " + pions[6] + " " + "|" + " " + pions[7] + " " + "|" + " " + pions[8] + " " + "|");
+            Console.WriteLine("-------------");
         }
 
-        static string[] jouer(int choix, string typePion, string[] pions)
+        static string[] placerUnPion(int choix, string typePion, string[] pions)
         {
             pions[choix - 1] = typePion;
             return pions;
         }
 
-        static string vic(string x, string[] table, string[] pions)
+        static string test(string[] pions, int choix)
         {
-            if (table[0] == o && table[1] == o && table[2] == o)
-            {
-                Console.WriteLine("j2 a gagné");
-            }
 
-            else if (table[3] == o && table[4] == o && table[5] == o)
+            if (choix <= 9 && choix >= 1)
             {
-                Console.WriteLine("j2 a gagné");
-            }
-
-            else if (table[6] == o && table[7] == o && table[8] == o)
-            {
-                Console.WriteLine("\n j2 a gagné");
-            }
-
-            else if (table[0] == o && table[3] == o && table[6] == o)
-            {
-                Console.WriteLine("\n j2 a gagné");
-            }
-
-            else if (table[1] == o && table[4] == o && table[7] == o)
-            {
-                Console.WriteLine("\n j2 a gagné");
-            }
-
-            else if (table[2] == o && table[5] == o && table[8] == o)
-            {
-                Console.WriteLine("\n j2 a gagné");
-            }
-
-            else if (table[0] == o && table[4] == o && table[8] == o)
-            {
-                Console.WriteLine("\n j2 a gagné");
-            }
-
-            else if (table[2] == o && table[4] == o && table[6] == o)
-            {
-                Console.WriteLine("\n j2 a gagné");
+                if (pions[choix - 1] != "X" && pions[choix - 1] != "O")
+                {
+                    return "";
+                }
+                else
+                {
+                    return "cette case est deja joué";
+                }
             }
             else
             {
-                j2NoWin = true;
+                return "ce numero n'est pas valide";
             }
         }
+
+        static bool vic(string pion, string[] pions)
+        {
+            if (pions[0] == pion && pions[1] == pion && pions[2] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[3] == pion && pions[4] == pion && pions[5] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[6] == pion && pions[7] == pion && pions[8] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[0] == pion && pions[3] == pion && pions[6] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[1] == pion && pions[4] == pion && pions[7] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[2] == pion && pions[5] == pion && pions[8] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[0] == pion && pions[4] == pion && pions[8] == pion)
+            {
+                return true;
+            }
+
+            else if (pions[2] == pion && pions[4] == pion && pions[6] == pion)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
         }
     }
+}
 
