@@ -12,7 +12,7 @@ namespace morpion_2._0
         {
             bool finDuProg = new bool();
             int joueur = 1;
-            int n = 0;
+            int n = 1;
             string pion = "X";
             int choix = 0;
             var table = new string[9];
