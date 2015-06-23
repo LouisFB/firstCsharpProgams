@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiffre", "chi2\Chiffre.csproj", "{8400C2EC-1DE5-4253-A3CB-C8D164227635}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello", "hello\hello.csproj", "{D20AB3FC-297B-46F9-BB23-4BF778D8475B}"
@@ -13,13 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moyenne 2", "moyenne 2\moye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morpion 2.0", "morpion 2.0\morpion 2.0\morpion 2.0.csproj", "{ADD32392-6DB2-4D74-BCE7-82A774F6250F}"
 EndProject
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morpion", "morpion\morpion.csproj", "{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "io1", "io\io1.csproj", "{DF21CB7D-B101-4B76-984E-540388425729}"
 EndProject
-=======
->>>>>>> origin/master
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstPage", "MyFirstPage\MyFirstPage.csproj", "{7A6DF6D2-8379-4C1A-B623-654540B9742B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "generateurhtml", "generateurhtml\generateurhtml.csproj", "{10EDBEC1-D044-4FE3-A363-FD5A5B1F72DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,7 +45,6 @@ Global
 		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADD32392-6DB2-4D74-BCE7-82A774F6250F}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
 		{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{311A0F14-9CF6-4FFD-9817-F3FB760B2F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,8 +53,14 @@ Global
 		{DF21CB7D-B101-4B76-984E-540388425729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF21CB7D-B101-4B76-984E-540388425729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF21CB7D-B101-4B76-984E-540388425729}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
->>>>>>> origin/master
+		{7A6DF6D2-8379-4C1A-B623-654540B9742B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6DF6D2-8379-4C1A-B623-654540B9742B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6DF6D2-8379-4C1A-B623-654540B9742B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6DF6D2-8379-4C1A-B623-654540B9742B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10EDBEC1-D044-4FE3-A363-FD5A5B1F72DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EDBEC1-D044-4FE3-A363-FD5A5B1F72DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EDBEC1-D044-4FE3-A363-FD5A5B1F72DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EDBEC1-D044-4FE3-A363-FD5A5B1F72DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

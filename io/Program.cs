@@ -21,12 +21,11 @@ namespace io1
                 bool result2 = File.Exists(chemin);
                 bool result1 = Directory.Exists(cheminSansNom);
 
-
                 if (result1 == true)
                 {
                     if (result2 == false)
                     {
-                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(chemin, true))
+                        using (StreamWriter file = new StreamWriter(chemin, true))
                         {
                             do
                             {
@@ -44,7 +43,7 @@ namespace io1
                         string ouinon = Console.ReadLine();
                         if (ouinon == "oui")
                         {
-                            System.IO.File.Delete(@"C:\dev\Write2.txt");
+                            File.Delete(@"C:\dev\Write2.txt");
                         }
                         else if (ouinon == "non")
                         {
